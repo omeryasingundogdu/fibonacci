@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Hesaplayıcı</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fibonacci Hesaplayıcı</h1>
+      <div class="input-section">
+        <label for="number"
+          >Kaçıncı Fibonacci sayısını bulmak istiyorsunuz?</label
+        >
+        <input type="number" id="number" min="1" max="1000" />
+        <button
+          onclick="const num = document.getElementById('number').value;
+                        if(num && num > 0) {
+                          const result = fibonacci(parseInt(num));
+                          document.getElementById('result').textContent = result[result.length-1];
+                        } else {
+                          alert('Lütfen 1 veya daha büyük bir sayı giriniz!');
+                        }"
+        >
+          Hesapla
+        </button>
+        <div class="result-section">
+          <p>Sonuç: <span id="result">-</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
